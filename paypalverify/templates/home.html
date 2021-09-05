@@ -1,0 +1,32 @@
+
+{% load static %}
+<! Doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css'%}">
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:200px;
+}
+</style>
+</head>
+<body>
+<img src="{% static 'img/paypal.png'%}" width=100px><br><br>
+<span style="margin-left:auto">
+<img src="{% static 'img/wrong.png'%}" class="center">
+</span>
+<article class="text text-danger" style="text-align: center;">{{l}} , Somthing wrong in your accout security</article><br>
+
+<a href="{% url 'security' %}">
+<button class="btn btn-primary center">Next</button>
+</a>
+<hr>
+<p class="text text-secondary" style="text-align:center">
+PayPal 1999-2021
+</p>
+</body>
+</html>
